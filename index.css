@@ -71,7 +71,7 @@ h2{
 
 
 .Main{
-    width: 1200px;
+    width: 1300px;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +81,7 @@ h2{
 }
 
 .MainLeft{
-    width: 220px;
+    width: 270px;
     border-radius: 5px;
     box-shadow: 0px 0px 15px 5px #00000020;
     padding: 15px 0;
@@ -104,7 +104,7 @@ h2{
     color: #ffffff;
 }
 .MainRight{
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -242,11 +242,16 @@ h2{
     background: #000000;
     color: #fff;
 }
+
+
 #scrollContainer {
     width: 100%;
     height: 200px;
 }
-
+#scrollContainer .zhenshangyin-scroll-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
 .slide {
     width: 300px;
     height: 100%;
@@ -258,4 +263,31 @@ h2{
     height: 100%;
     object-fit: cover;
 }
+.swiper-container {
+    width: 100%;
+}
+.swiper-container ul{
+    margin-top: 0px;
+}
+.swiper-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
+.zhenshangyin-slide h1 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+}
+
+.zhenshangyin-slide-active h1 {
+    top: 50%;
+}
