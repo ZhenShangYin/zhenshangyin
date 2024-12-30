@@ -7,7 +7,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /* font-family: "a"; */
+    font-family: "a";
 }
 
 input {
@@ -72,6 +72,7 @@ h2{
 
 .Main{
     width: 1300px;
+    max-width: 95%;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
@@ -192,6 +193,7 @@ h2{
 }
 .table{
     width: 100%;
+    overflow: auto;
     margin-top: 15px;
     font-size: 13px;
     color: #000000;
@@ -212,6 +214,7 @@ h2{
     border: 1px solid #e9e9e9;
     padding: 10px 20px;
     text-align: left;
+    font-size: 12px;
 }
 .code{
     width: 100%;
@@ -294,6 +297,7 @@ h2{
 
 #myDiv{
     width: 500px;
+    max-width: 100%;
     overflow: hidden;
     background: #000000;
     border-radius: 5px;
@@ -306,4 +310,25 @@ h2{
     color: #ffffff;
     text-align: center;
     margin: 50px auto;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .MainLeft{
+        width: 100%;
+        position: static;
+    }
+    .MainRight{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .grid4,
+    .grid3,
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+    .zhenshangyin-slide{
+        width: 60% !important;
+    }
 }
