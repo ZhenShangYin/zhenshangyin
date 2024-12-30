@@ -7,7 +7,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "a";
+    /* font-family: "a"; */
 }
 
 input {
@@ -290,4 +290,20 @@ h2{
 
 .zhenshangyin-slide-active h1 {
     top: 50%;
+}
+
+#myDiv{
+    width: 500px;
+    overflow: hidden;
+    background: #000000;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #ffffff;
+    display: none;
+}
+#myDiv h2{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin: 50px auto;
 }
