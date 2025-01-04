@@ -557,6 +557,12 @@
                                 <td><code>() => {}</code></td>
                                 <td>选择的回调函数</td>
                             </tr>
+                            <tr>
+                                <td><code>onFinish</code></td>
+                                <td><code>function</code></td>
+                                <td><code>() => {}</code></td>
+                                <td>最后一级的回调函数</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -622,6 +628,21 @@
                                 </div>
                                 <div class="slide">
                                     <img src="4.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="5.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="6.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="7.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="8.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="9.jpg">
                                 </div>
                             </div>
                         </div>
@@ -1039,6 +1060,16 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>beforeInit</td>
+                                <td>swiper</td>
+                                <td>Swiper初始化前触发</td>
+                            </tr>
+                            <tr>
+                                <td>init</td>
+                                <td>swiper</td>
+                                <td>Swiper初始化完成后触发</td>
+                            </tr>
+                            <tr>
                                 <td>slideChange</td>
                                 <td>
                                     {<br>
@@ -1047,52 +1078,104 @@
                                     &nbsp;&nbsp;activeClasses: string[]<br>
                                     }
                                 </td>
-                                <td>slide切换时触发</td>
+                                <td>幻灯片切换时触发</td>
+                            </tr>
+                            <tr>
+                                <td>beforeSlideChangeStart</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;activeIndex: number,<br>
+                                    &nbsp;&nbsp;targetIndex: number<br>
+                                    }
+                                </td>
+                                <td>幻灯片开始切换之前触发</td>
+                            </tr>
+                            <tr>
+                                <td>beforeTransitionStart</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;activeIndex: number,<br>
+                                    &nbsp;&nbsp;targetIndex: number<br>
+                                    }
+                                </td>
+                                <td>过渡动画开始之前触发</td>
+                            </tr>
+                            <tr>
+                                <td>transitionStart</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;activeIndex: number,<br>
+                                    &nbsp;&nbsp;targetIndex: number<br>
+                                    }
+                                </td>
+                                <td>过渡动画开始时触发</td>
+                            </tr>
+                            <tr>
+                                <td>transitionEnd</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;activeIndex: number,<br>
+                                    &nbsp;&nbsp;previousIndex: number<br>
+                                    }
+                                </td>
+                                <td>过渡动画结束时触发</td>
                             </tr>
                             <tr>
                                 <td>slideChangeTransitionStart</td>
                                 <td>
                                     {<br>
                                     &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;activeSlide: HTMLElement,<br>
-                                    &nbsp;&nbsp;activeClasses: string[],<br>
                                     &nbsp;&nbsp;direction: 'next' | 'prev'<br>
                                     }
                                 </td>
-                                <td>slide切换动画开始时触发</td>
+                                <td>幻灯片切换过渡开始时触发</td>
                             </tr>
                             <tr>
                                 <td>slideChangeTransitionEnd</td>
                                 <td>
                                     {<br>
                                     &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;activeSlide: HTMLElement,<br>
-                                    &nbsp;&nbsp;activeClasses: string[],<br>
                                     &nbsp;&nbsp;direction: 'next' | 'prev'<br>
                                     }
                                 </td>
-                                <td>slide切换动画结束时触发</td>
+                                <td>幻灯片切换过渡结束时触发</td>
                             </tr>
                             <tr>
                                 <td>slideActiveIndexChange</td>
                                 <td>
                                     {<br>
                                     &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;previousIndex: number,<br>
-                                    &nbsp;&nbsp;activeSlide: HTMLElement,<br>
-                                    &nbsp;&nbsp;activeClasses: string[]<br>
+                                    &nbsp;&nbsp;previousIndex: number<br>
                                     }
                                 </td>
-                                <td>活动slide索引改变时触发</td>
+                                <td>活动幻灯片索引改变时触发</td>
+                            </tr>
+                            <tr>
+                                <td>autoplayStart</td>
+                                <td>swiper</td>
+                                <td>自动播放开始时触发</td>
+                            </tr>
+                            <tr>
+                                <td>autoplayStop</td>
+                                <td>swiper</td>
+                                <td>自动播放停止时触发</td>
+                            </tr>
+                            <tr>
+                                <td>autoplayPause</td>
+                                <td>swiper</td>
+                                <td>自动播放暂停时触发(如鼠标悬停)</td>
+                            </tr>
+                            <tr>
+                                <td>autoplayResume</td>
+                                <td>swiper</td>
+                                <td>自动播放恢复时触发</td>
                             </tr>
                             <tr>
                                 <td>touchStart</td>
                                 <td>
                                     {<br>
-                                    &nbsp;&nbsp;event: Event,<br>
                                     &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;activeSlide: HTMLElement,<br>
-                                    &nbsp;&nbsp;activeClasses: string[]<br>
+                                    &nbsp;&nbsp;event: Event<br>
                                     }
                                 </td>
                                 <td>触摸开始时触发</td>
@@ -1101,8 +1184,6 @@
                                 <td>touchMove</td>
                                 <td>
                                     {<br>
-                                    &nbsp;&nbsp;event: Event,<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
                                     &nbsp;&nbsp;moveX: number,<br>
                                     &nbsp;&nbsp;moveY: number<br>
                                     }
@@ -1113,13 +1194,104 @@
                                 <td>touchEnd</td>
                                 <td>
                                     {<br>
-                                    &nbsp;&nbsp;event: Event,<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
                                     &nbsp;&nbsp;moveDistance: number,<br>
                                     &nbsp;&nbsp;duration: number<br>
                                     }
                                 </td>
                                 <td>触摸结束时触发</td>
+                            </tr>
+                            <tr>
+                                <td>click</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;target: HTMLElement<br>
+                                    }
+                                </td>
+                                <td>点击幻灯片时触发</td>
+                            </tr>
+                            <tr>
+                                <td>doubleClick</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;target: HTMLElement<br>
+                                    }
+                                </td>
+                                <td>双击幻灯片时触发</td>
+                            </tr>
+                            <tr>
+                                <td>scroll</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;deltaY: number<br>
+                                    }
+                                </td>
+                                <td>鼠标滚轮滚动时触发</td>
+                            </tr>
+                            <tr>
+                                <td>resize</td>
+                                <td>swiper</td>
+                                <td>容器尺寸改变时触发</td>
+                            </tr>
+                            <tr>
+                                <td>breakpoint</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;breakpoint: number<br>
+                                    }
+                                </td>
+                                <td>断点切换时触发</td>
+                            </tr>
+                            <tr>
+                                <td>a11y</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;key: string<br>
+                                    }
+                                </td>
+                                <td>键盘操作或屏幕阅读器操作时触发</td>
+                            </tr>
+                            <tr>
+                                <td>imagesReady</td>
+                                <td>swiper</td>
+                                <td>所有图片加载完成时触发</td>
+                            </tr>
+                            <tr>
+                                <td>lazyImageLoad</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;src: string<br>
+                                    }
+                                </td>
+                                <td>懒加载图片开始加载时触发</td>
+                            </tr>
+                            <tr>
+                                <td>lazyImageReady</td>
+                                <td>
+                                    {<br>
+                                    &nbsp;&nbsp;src: string<br>
+                                    }
+                                </td>
+                                <td>懒加载图片加载完成时触发</td>
+                            </tr>
+                            <tr>
+                                <td>beforeUpdate</td>
+                                <td>swiper</td>
+                                <td>Swiper更新前触发</td>
+                            </tr>
+                            <tr>
+                                <td>update</td>
+                                <td>swiper</td>
+                                <td>Swiper更新后触发</td>
+                            </tr>
+                            <tr>
+                                <td>beforeDestroy</td>
+                                <td>swiper</td>
+                                <td>Swiper销毁前触发</td>
+                            </tr>
+                            <tr>
+                                <td>destroy</td>
+                                <td>swiper</td>
+                                <td>Swiper销毁后触发</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1289,6 +1461,7 @@
     <script src="No-Pillow.js"></script>
     <script src="index.js"></script>
     <script>
+        translate.language.setDefaultTo('en')
         translate.execute();
     </script>
 </body>
