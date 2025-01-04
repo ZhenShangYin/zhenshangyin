@@ -286,7 +286,7 @@ h2{
     font-size: 50px;
     position: absolute;
     top: -20%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%, -50%);
     transition: all 1s;
 }
@@ -332,3 +332,30 @@ h2{
         width: 60% !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
