@@ -328,10 +328,9 @@ h2{
     .grid2{
         grid-template-columns: 1fr;
     }
-    .zhenshangyin-slide{
-        width: 60% !important;
-    }
 }
+
+
 
 
 
