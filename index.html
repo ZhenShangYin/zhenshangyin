@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,height=device-height">
+    <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,height=device-height">
     <title>枕上瘾</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="No-Pillow.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -13,50 +15,57 @@
     <div class="Main">
         <div class="MainLeft">
             <div class="MainLeftList MainLeftListNav">
-                <h2>LoadingBar 加载进度条</h2>
+                <h2>阻尼SmoothScroll</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Message 消息提示</h2>
+                <h2>消息提示Message</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Notification 通知</h2>
+                <h2>通知提醒Notification</h2>
             </div>
             <div class="MainLeftList">
-                <h2>DatePicker 日期选择器</h2>
+                <h2>日期选择器DatePicker</h2>
             </div>
             <div class="MainLeftList">
-                <h2>TimePicker 时间选择器</h2>
+                <h2>下拉选择器Select</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Select 选择器</h2>
+                <h2>联级选择器Cascader</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Cascader 联级选择器</h2>
+                <h2>数字滚动NumberScroll</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Digital scrolling 数字滚动</h2>
+                <h2>图片查看器ImageViewer</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Seamless scrolling 无缝滚动</h2>
+                <h2>无缝滚动InfiniteScroll</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Swiper 轮播图</h2>
+                <h2>轮播图Swiper</h2>
             </div>
             <div class="MainLeftList">
-                <h2>Animation</h2>
+                <h2>动画效果Animation</h2>
+            </div>
+            <div class="MainLeftList">
+                <h2>页面滚动 Scroll Animate</h2>
+            </div>
+            <div class="MainLeftList">
+                <h2>盒子效果 Box Reveal</h2>
+            </div>
+            <div class="MainLeftList">
+                <h2>文字效果TextEffec</h2>
             </div>
             <div class="MainLeftList">
                 <h2>Slider 滑块</h2>
             </div>
-
         </div>
-
 
         <div class="MainRight">
             <div class="MainRightList">
-                <h2>LoadingBar 加载进度条</h2>
+                <h2>阻尼SmoothScroll</h2>
                 <div class="code">
-                    <code>new ZhenshangyinLoadingBar(options);</code>
+                    <code>new ZhenshangyinSmoothScroll(options);</code>
                 </div>
                 <div class="table">
                     <table>
@@ -70,35 +79,29 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>height</code></td>
+                                <td><code>damping</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0.08</code></td>
+                                <td>滚动阻尼，值越小滚动越柔和</td>
+                            </tr>
+                            <tr>
+                                <td><code>scrollMultiplier</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1</code></td>
+                                <td>滚动倍数，增加滚动距离</td>
+                            </tr>
+                            <tr>
+                                <td><code>preventScrollOn</code></td>
                                 <td><code>string</code></td>
-                                <td><code>'2px'</code></td>
-                                <td>进度条高度</td>
-                            </tr>
-                            <tr>
-                                <td><code>backgroundColor</code></td>
-                                <td><code>string</code></td>
-                                <td><code>'#000000'</code></td>
-                                <td>进度条背景色</td>
-                            </tr>
-                            <tr>
-                                <td><code>bindToScroll</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>绑定滚动事件，根据滚动位置更新进度</td>
-                            </tr>
-                            <tr>
-                                <td><code>updateProgress</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>手动更新进度，参数为进度值(0-100)</td>
+                                <td><code>''</code></td>
+                                <td>指定选择器，匹配到的元素上禁用平滑滚动</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Message 消息提示</h2>
+                <h2>消息提示Message</h2>
                 <ul class="grid4">
                     <li>
                         <button id="showSuccessMessageA">成功提示</button>
@@ -151,7 +154,7 @@
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Notification 通知</h2>
+                <h2>通知提醒Notification</h2>
                 <ul class="grid4">
                     <li>
                         <button id="showSuccessNotification">成功通知</button>
@@ -210,7 +213,7 @@
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>DatePicker 日期选择器</h2>
+                <h2>日期选择器DatePicker</h2>
                 <ul class="grid3">
                     <li>
                         <h3>基础用法</h3>
@@ -232,13 +235,16 @@
                     </li>
                     <li>
                         <h3>日期时间范围</h3>
-                        <input type="text" readonly autocomplete="off" id="dateRangePickerWithTime" placeholder="请选择日期时间范围">
+                        <input type="text" readonly autocomplete="off" id="dateRangePickerWithTime"
+                            placeholder="请选择日期时间范围">
                     </li>
                     <li>
                         <h3>分离式日期范围</h3>
                         <div style="display: flex; gap: 10px;">
-                            <input type="text" readonly autocomplete="off" id="dateRangePickerStartSeparate" placeholder="开始日期">
-                            <input type="text" readonly autocomplete="off" id="dateRangePickerEndSeparate" placeholder="结束日期">
+                            <input type="text" readonly autocomplete="off" id="dateRangePickerStartSeparate"
+                                placeholder="开始日期">
+                            <input type="text" readonly autocomplete="off" id="dateRangePickerEndSeparate"
+                                placeholder="结束日期">
                         </div>
                     </li>
                 </ul>
@@ -266,8 +272,10 @@
                     <li>
                         <h3>分离式月份范围</h3>
                         <div style="display: flex; gap: 10px;">
-                            <input type="text" readonly autocomplete="off" id="monthRangePickerStartSeparate" placeholder="开始月份">
-                            <input type="text" readonly autocomplete="off" id="monthRangePickerEndSeparate" placeholder="结束月份">
+                            <input type="text" readonly autocomplete="off" id="monthRangePickerStartSeparate"
+                                placeholder="开始月份">
+                            <input type="text" readonly autocomplete="off" id="monthRangePickerEndSeparate"
+                                placeholder="结束月份">
                         </div>
                     </li>
                 </ul>
@@ -289,114 +297,16 @@
                     <li>
                         <h3>分离式年份范围</h3>
                         <div style="display: flex; gap: 10px;">
-                            <input type="text" readonly autocomplete="off" id="yearRangePickerStartSeparate" placeholder="开始年份">
-                            <input type="text" readonly autocomplete="off" id="yearRangePickerEndSeparate" placeholder="结束年份">
+                            <input type="text" readonly autocomplete="off" id="yearRangePickerStartSeparate"
+                                placeholder="开始年份">
+                            <input type="text" readonly autocomplete="off" id="yearRangePickerEndSeparate"
+                                placeholder="结束年份">
                         </div>
                     </li>
                 </ul>
-                <div class="code">
-                    <code>new ZhenshangyinDateSelector('inputSelector', options);</code>
-                </div>
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>参数</th>
-                                <th>类型</th>
-                                <th>默认值</th>
-                                <th>说明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>type</code></td>
-                                <td><code>string</code></td>
-                                <td><code>'date'</code></td>
-                                <td>选择器类型，可选值：<code>'date'</code>(日期)、<code>'dateRange'</code>(日期范围)、<code>'week'</code>(周)、<code>'month'</code>(月份)、<code>'monthRange'</code>(月份范围)、<code>'year'</code>(年份)、<code>'yearRange'</code>(年份范围)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>dateFormat</code></td>
-                                <td><code>string</code></td>
-                                <td><code>'YYYY-MM-DD'</code></td>
-                                <td>日期格式，支持：<code>YYYY</code>(年)、<code>MM</code>(月)、<code>DD</code>(日)、<code>HH</code>(时)、<code>mm</code>(分)、<code>ss</code>(秒)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>separator</code></td>
-                                <td><code>string</code></td>
-                                <td><code>'至'</code></td>
-                                <td>范围选择的分隔符</td>
-                            </tr>
-                            <tr>
-                                <td><code>multiSelect</code></td>
-                                <td><code>boolean</code></td>
-                                <td><code>false</code></td>
-                                <td>是否开启多选</td>
-                            </tr>
-                            <tr>
-                                <td><code>separator</code></td>
-                                <td><code>string</code></td>
-                                <td><code>,</code></td>
-                                <td>多选分隔符</td>
-                            </tr>
-                            <tr>
-                                <td><code>language</code></td>
-                                <td><code>boolean</code></td>
-                                <td><code>cn</code></td>
-                                <td>是否开启国际</td>
-                            </tr>
-                            <tr>
-                                <td><code>onDateSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>日期选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onDateRangeSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>日期范围选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onWeekSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>周选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onMonthSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>月份选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onMonthRangeSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>月份范围选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onYearSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>年份选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>onYearRangeSelect</code></td>
-                                <td><code>function</code></td>
-                                <td>-</td>
-                                <td>年份范围选择的回调函数</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="MainRightList">
-                <h2>TimePicker 时间选择器</h2>
                 <ul class="grid2">
                     <li>
-                        <h3>基础用法</h3>
+                        <h3>时间选择</h3>
                         <input type="text" readonly autocomplete="off" id="timeInput" placeholder="请选择时间">
                     </li>
                     <li>
@@ -419,41 +329,92 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>inputSelector</code></td>
+                                <td><code>type</code></td>
                                 <td><code>string</code></td>
-                                <td>-</td>
-                                <td>输入框选择器</td>
+                                <td><code>'date'</code></td>
+                                <td>选择器类型，可选值：<code>'date'</code>、<code>'dateRange'</code>、<code>'week'</code>、<code>'month'</code>、<code>'monthRange'</code>、<code>'year'</code>、<code>'yearRange'</code>、<code>'time'</code>、<code>'timeRange'</code>
+                                </td>
                             </tr>
                             <tr>
                                 <td><code>dateFormat</code></td>
                                 <td><code>string</code></td>
-                                <td><code>'HH:mm:ss'</code></td>
-                                <td>时间格式，支持：<code>'HH'</code>、<code>'HH:mm'</code>、<code>'HH:mm:ss'</code></td>
+                                <td>-</td>
+                                <td>日期/时间的显示和输出格式，如 <code>'YYYY-MM-DD'</code>，默认根据 <code>type</code> 自动设置</td>
                             </tr>
                             <tr>
-                                <td><code>onTimeSelect</code></td>
-                                <td><code>function</code></td>
-                                <td><code>() => {}</code></td>
-                                <td>时间选择的回调函数</td>
-                            </tr>
-                            <tr>
-                                <td><code>isRange</code></td>
-                                <td><code>boolean</code></td>
-                                <td><code>false</code></td>
-                                <td>是否为时间范围选择</td>
+                                <td><code>language</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'zh'</code></td>
+                                <td>语言设置，可选值：<code>'zh'</code>（中文）、<code>'en'</code>（英文）</td>
                             </tr>
                             <tr>
                                 <td><code>separator</code></td>
                                 <td><code>string</code></td>
-                                <td><code>' - '</code></td>
-                                <td>范围选择的分隔符</td>
+                                <td>-</td>
+                                <td>范围选择或多选时的分隔符</td>
+                            </tr>
+                            <tr>
+                                <td><code>multiSelect</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否允许多选，仅适用于 <code>date</code>、<code>month</code>、<code>year</code> 类型</td>
+                            </tr>
+                            <tr>
+                                <td><code>dateDelimiter</code></td>
+                                <td><code>string</code></td>
+                                <td><code>','</code></td>
+                                <td>多选时各个日期之间的分隔符</td>
+                            </tr>
+                            <tr>
+                                <td><code>availableHours</code></td>
+                                <td><code>number[]</code></td>
+                                <td><code>[0-23]</code></td>
+                                <td>可选的小时数组，限制可选小时范围，默认 0-23</td>
+                            </tr>
+                            <tr>
+                                <td><code>availableMinutes</code></td>
+                                <td><code>number[]</code></td>
+                                <td><code>[0-59]</code></td>
+                                <td>可选的分钟数组，限制可选分钟范围，默认 0-59</td>
+                            </tr>
+                            <tr>
+                                <td><code>availableSeconds</code></td>
+                                <td><code>number[]</code></td>
+                                <td><code>[0-59]</code></td>
+                                <td>可选的秒数组，限制可选秒范围，默认 0-59</td>
+                            </tr>
+                            <tr>
+                                <td><code>disabledWeekdays</code></td>
+                                <td><code>number[]</code></td>
+                                <td><code>[]</code></td>
+                                <td>禁用的星期几，0=周日，6=周六，如 <code>[0, 6]</code> 表示禁用周末</td>
+                            </tr>
+                            <tr>
+                                <td><code>disabledItems</code></td>
+                                <td><code>array</code></td>
+                                <td><code>[]</code></td>
+                                <td>禁用的具体项目（日期、月份或年份），支持格式：<code>'YYYY-MM-DD'</code>（日期）、<code>'YYYY-MM'</code>（月份）、数字年份，如
+                                    <code>['2024-01-01', '2024-01', 2022]</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>disabledRanges</code></td>
+                                <td><code>array</code></td>
+                                <td><code>[]</code></td>
+                                <td>禁用的范围（日期、月份或年份区间），格式：<code>[{start: '2024-01-01', end: '2024-01-07'}, {start: '2024-06', end: '2024-08'}, {start: 2020, end: 2022}]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>onSelect</code></td>
+                                <td><code>function</code></td>
+                                <td>-</td>
+                                <td>选择完成后的回调函数，参数 <code>value</code> 为选择的值</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Select 选择器</h2>
+                <h2>下拉选择器Select</h2>
                 <ul class="grid3">
                     <li>
                         <h3>基础用法</h3>
@@ -486,55 +447,62 @@
                                 <td><code>container</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>选择器容器</td>
+                                <td>主输入框的容器</td>
                             </tr>
                             <tr>
                                 <td><code>data</code></td>
                                 <td><code>array</code></td>
                                 <td>-</td>
-                                <td>选项数据</td>
+                                <td>选项数据，支持分组格式 <code>[{groupTitle: '分组1', children: [{title: '选项1'}]}]</code> 或普通格式
+                                    <code>[{title: '选项1'}]</code></td>
                             </tr>
                             <tr>
                                 <td><code>customParams</code></td>
                                 <td><code>object</code></td>
                                 <td><code>{}</code></td>
-                                <td>自定义参数</td>
+                                <td>自定义参数对象，可在回调函数中使用，如 <code>{param1: 'value1', param2: 'value2'}</code></td>
                             </tr>
                             <tr>
-                                <td><code>onSelect</code></td>
-                                <td><code>function</code></td>
-                                <td><code>() => {}</code></td>
-                                <td>选择的回调函数</td>
+                                <td><code>disabled</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否禁用组件</td>
+                            </tr>
+                            <tr>
+                                <td><code>hoverEnabled</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否启用鼠标划入显示下拉框</td>
                             </tr>
                             <tr>
                                 <td><code>searchEnabled</code></td>
                                 <td><code>boolean</code></td>
                                 <td><code>false</code></td>
-                                <td>是否开启搜索</td>
+                                <td>是否启用下拉框中的搜索功能</td>
                             </tr>
                             <tr>
                                 <td><code>inputSearchEnabled</code></td>
                                 <td><code>boolean</code></td>
                                 <td><code>false</code></td>
-                                <td>是否开启输入框搜索</td>
+                                <td>是否启用主输入框内的实时搜索功能</td>
                             </tr>
                             <tr>
                                 <td><code>defaultSelected</code></td>
                                 <td><code>string/array</code></td>
                                 <td><code>null</code></td>
-                                <td>默认选中项</td>
+                                <td>默认选中项，单选为字符串如 <code>'选项4'</code>，多选为数组如 <code>['选项4', '选项5']</code></td>
                             </tr>
                             <tr>
                                 <td><code>grouped</code></td>
                                 <td><code>boolean</code></td>
                                 <td><code>false</code></td>
-                                <td>是否开启分组</td>
+                                <td>是否启用分组功能，数据将分成多个组进行展示</td>
                             </tr>
                             <tr>
                                 <td><code>multiSelect</code></td>
                                 <td><code>boolean</code></td>
                                 <td><code>false</code></td>
-                                <td>是否开启多选</td>
+                                <td>是否启用多选功能</td>
                             </tr>
                             <tr>
                                 <td><code>inputMultiSelect</code></td>
@@ -542,16 +510,30 @@
                                 <td><code>false</code></td>
                                 <td>是否在输入框显示多选结果</td>
                             </tr>
+                            <tr>
+                                <td><code>language</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'zh'</code></td>
+                                <td>语言设置，可选值：<code>'zh'</code>（中文）、<code>'en'</code>（英文）</td>
+                            </tr>
+                            <tr>
+                                <td><code>onSelect</code></td>
+                                <td><code>function</code></td>
+                                <td>-</td>
+                                <td>选项选择时的回调函数，参数 <code>item</code> 为选中的项，可通过 <code>this.selectedItems</code> 获取所有选中项
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Cascader 联级选择器</h2>
+                <h2>联级选择器Cascader</h2>
                 <ul class="grid3">
                     <li>
                         <h3>基础用法</h3>
-                        <input type="text" readonly autocomplete="off" id="cascaderProvinceCityDistrict" placeholder="请选择">
+                        <input type="text" readonly autocomplete="off" id="cascaderProvinceCityDistrict"
+                            placeholder="请选择">
                     </li>
                     <li>
                         <h3>无限级联</h3>
@@ -566,6 +548,7 @@
                         </div>
                     </li>
                 </ul>
+
                 <div class="code">
                     <code>new ZhenshangyinLinkage(options);</code>
                 </div>
@@ -584,44 +567,50 @@
                                 <td><code>container</code></td>
                                 <td><code>string</code></td>
                                 <td>-</td>
-                                <td>选择器容器</td>
+                                <td>绑定选择框容器，如 <code>'#addressinput'</code></td>
                             </tr>
                             <tr>
                                 <td><code>multiInputs</code></td>
                                 <td><code>string[]</code></td>
                                 <td>-</td>
-                                <td>多选择器容器数组</td>
+                                <td>联动选择的多个输入框数组</td>
                             </tr>
                             <tr>
                                 <td><code>data</code></td>
-                                <td><code>object[]</code></td>
+                                <td><code>array</code></td>
                                 <td>-</td>
-                                <td>级联数据</td>
+                                <td>级联数据，需要引入相应的数据文件，如地区数据 <code>chinaData</code></td>
                             </tr>
                             <tr>
                                 <td><code>separator</code></td>
                                 <td><code>string</code></td>
-                                <td><code>'-'</code></td>
+                                <td><code>'/'</code></td>
                                 <td>选项分隔符</td>
+                            </tr>
+                            <tr>
+                                <td><code>language</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'zh'</code></td>
+                                <td>语言设置，可选值：<code>'zh'</code>（中文）、<code>'en'</code>（英文）</td>
                             </tr>
                             <tr>
                                 <td><code>callback</code></td>
                                 <td><code>function</code></td>
-                                <td><code>() => {}</code></td>
-                                <td>选择的回调函数</td>
+                                <td>-</td>
+                                <td>选择即执行的回调函数，参数 <code>value</code> 为当前选择的值</td>
                             </tr>
                             <tr>
                                 <td><code>onFinish</code></td>
                                 <td><code>function</code></td>
-                                <td><code>() => {}</code></td>
-                                <td>最后一级的回调函数</td>
+                                <td>-</td>
+                                <td>选择完成后的回调函数，参数 <code>value</code> 为最终选择的值</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Digital scrolling 数字滚动</h2>
+                <h2>数字滚动NumberScroll</h2>
                 <ul class="grid3">
                     <li class="number-scroll">500</li>
                     <li class="number-scroll">5000</li>
@@ -664,39 +653,129 @@
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Seamless scrolling 无缝滚动</h2>
+                <h2>图片查看器ImageViewer</h2>
+                <ul class="grid3 Viewer" data-group="li" data-next-trigger="0.3">
+                    <li>
+                        <img src="1.jpg">
+                    </li>
+                    <li>
+                        <img src="2.jpg">
+                    </li>
+                    <li>
+                        <img src="3.jpg">
+                    </li>
+                    <li>
+                        <img src="4.jpg">
+                    </li>
+                    <li>
+                        <img src="5.jpg">
+                    </li>
+                    <li>
+                        <img src="6.jpg">
+                    </li>
+                    <li>
+                        <img src="7.jpg">
+                    </li>
+                    <li>
+                        <img src="8.jpg">
+                    </li>
+                    <li>
+                        <img src="9.jpg">
+                    </li>
+                </ul>
+                <div class="code">
+                    <code>new ZhenshangyinImageViewer('inputSelector', options);</code>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>类型</th>
+                                <th>默认值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>zoomRatio</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0.1</code></td>
+                                <td>每次缩放的比例，默认 0.1</td>
+                            </tr>
+                            <tr>
+                                <td><code>minZoom</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0.1</code></td>
+                                <td>最小缩放比例，默认 0.1</td>
+                            </tr>
+                            <tr>
+                                <td><code>maxZoom</code></td>
+                                <td><code>number</code></td>
+                                <td><code>10</code></td>
+                                <td>最大缩放比例，默认 10</td>
+                            </tr>
+                            <tr>
+                                <td><code>showThumbnails</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
+                                <td>是否显示缩略图导航栏</td>
+                            </tr>
+                            <tr>
+                                <td><code>autoplayInterval</code></td>
+                                <td><code>number</code></td>
+                                <td><code>3000</code></td>
+                                <td>自动播放间隔时间（毫秒），默认 3000ms（3秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>triggerSelector</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>点击外部按钮唤起的选择器，如 <code>'.Click'</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>imageSelector</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>选择特定图片的选择器，支持格式：<code>'img'</code>（所有图片）、<code>'.class'</code>（指定类名）、<code>'#id'</code>（指定ID）、<code>'[attr=value]'</code>（指定属性）、<code>'parent > img'</code>（父元素下）、<code>'.container img:not(.excluded)'</code>（排除指定类）
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MainRightList">
+                <h2>无缝滚动InfiniteScroll</h2>
                 <ul>
                     <li>
                         <h3>用法</h3>
                         <div class="zhenshangyin-scroll" id="scrollContainer">
-                            <div class="zhenshangyin-scroll-wrapper">
-                                <div class="slide">
-                                    <img src="1.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="2.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="3.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="4.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="5.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="6.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="7.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="8.jpg">
-                                </div>
-                                <div class="slide">
-                                    <img src="9.jpg">
-                                </div>
+                            <div class="slide">
+                                <img src="1.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="2.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="3.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="4.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="5.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="6.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="7.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="8.jpg">
+                            </div>
+                            <div class="slide">
+                                <img src="9.jpg">
                             </div>
                         </div>
                     </li>
@@ -716,48 +795,30 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>container</code></td>
-                                <td><code>string</code></td>
-                                <td>-</td>
-                                <td>选择器容器</td>
-                            </tr>
-                            <tr>
                                 <td><code>direction</code></td>
                                 <td><code>string</code></td>
                                 <td><code>'left'</code></td>
-                                <td>滚动方向，可选值：<code>'left'</code>、<code>'right'</code>、<code>'up'</code>、<code>'down'</code>
+                                <td>滚动方向，可选值：<code>'up'</code>、<code>'down'</code>、<code>'left'</code>、<code>'right'</code>
                                 </td>
                             </tr>
                             <tr>
                                 <td><code>speed</code></td>
                                 <td><code>number</code></td>
-                                <td><code>1</code></td>
-                                <td>滚动速度，单位为像素/帧</td>
+                                <td><code>50</code></td>
+                                <td>滚动速度，单位：像素/秒</td>
                             </tr>
                             <tr>
-                                <td><code>pauseOnHover</code></td>
+                                <td><code>hoverPause</code></td>
                                 <td><code>boolean</code></td>
                                 <td><code>true</code></td>
                                 <td>鼠标悬停时是否暂停滚动</td>
-                            </tr>
-                            <tr>
-                                <td><code>autoplay</code></td>
-                                <td><code>boolean</code></td>
-                                <td><code>true</code></td>
-                                <td>是否自动播放</td>
-                            </tr>
-                            <tr>
-                                <td><code>hoverPlay</code></td>
-                                <td><code>boolean</code></td>
-                                <td><code>false</code></td>
-                                <td>鼠标悬停时是否继续播放</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Swiper 轮播图</h2>
+                <h2>轮播图Swiper</h2>
                 <ul>
                     <li>
                         <div class="swiper-container cc">
@@ -966,393 +1027,202 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>direction</td>
-                                <td>string</td>
-                                <td>'horizontal'</td>
-                                <td>轮播方向，可选值：'horizontal' | 'vertical'</td>
+                                <td><code>direction</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'horizontal'</code></td>
+                                <td>轮播方向，可选值：<code>'horizontal'</code>（水平）、<code>'vertical'</code>（垂直）</td>
                             </tr>
                             <tr>
-                                <td>effect</td>
-                                <td>string</td>
-                                <td>'slide'</td>
-                                <td>切换效果，可选值：'slide' | 'fade'</td>
+                                <td><code>effect</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'slide'</code></td>
+                                <td>切换效果，可选值：<code>'slide'</code>（滑动）、<code>'fade'</code>（淡入淡出）</td>
                             </tr>
                             <tr>
-                                <td>loop</td>
-                                <td>boolean</td>
-                                <td>false</td>
+                                <td><code>loop</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
                                 <td>是否开启循环播放</td>
                             </tr>
                             <tr>
-                                <td>speed</td>
-                                <td>number</td>
-                                <td>300</td>
-                                <td>切换动画时长(ms)</td>
+                                <td><code>speed</code></td>
+                                <td><code>number</code></td>
+                                <td><code>300</code></td>
+                                <td>切换动画时长（毫秒）</td>
                             </tr>
                             <tr>
-                                <td>autoplay</td>
-                                <td>boolean</td>
-                                <td>false</td>
+                                <td><code>autoplay</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
                                 <td>是否自动播放</td>
                             </tr>
                             <tr>
-                                <td>interval</td>
-                                <td>number</td>
-                                <td>3000</td>
-                                <td>自动播放间隔时间(ms)</td>
+                                <td><code>interval</code></td>
+                                <td><code>number</code></td>
+                                <td><code>3000</code></td>
+                                <td>自动播放间隔时间（毫秒）</td>
                             </tr>
                             <tr>
-                                <td>pauseOnHover</td>
-                                <td>boolean</td>
-                                <td>false</td>
+                                <td><code>pauseOnMouseEnter</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
                                 <td>鼠标悬停时是否暂停自动播放</td>
                             </tr>
                             <tr>
-                                <td>slidesPerView</td>
-                                <td>number | 'auto'</td>
-                                <td>1</td>
-                                <td>同时显示的slide数量，设为'auto'时根据容器宽度自动计算</td>
+                                <td><code>slidesPerView</code></td>
+                                <td><code>number/string</code></td>
+                                <td><code>1</code></td>
+                                <td>同时显示的 slide 数量</td>
                             </tr>
                             <tr>
-                                <td>slidesPerGroup</td>
-                                <td>number</td>
-                                <td>1</td>
-                                <td>每次切换的slide数量</td>
+                                <td><code>spaceBetween</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0</code></td>
+                                <td>slide 之间的间距（像素）</td>
                             </tr>
                             <tr>
-                                <td>spaceBetween</td>
-                                <td>number</td>
-                                <td>0</td>
-                                <td>slide之间的间距(px)</td>
+                                <td><code>slidesPerGroup</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1</code></td>
+                                <td>每次切换的 slide 数量</td>
                             </tr>
                             <tr>
-                                <td>centeredSlides</td>
-                                <td>boolean</td>
-                                <td>false</td>
-                                <td>是否居中显示当前slide</td>
+                                <td><code>centeredSlides</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否居中显示当前 slide</td>
                             </tr>
                             <tr>
-                                <td>breakpoints</td>
-                                <td>object</td>
-                                <td>{}</td>
-                                <td>断点配置对象，可针对不同屏幕宽度设置不同配置</td>
+                                <td><code>linkedGroup</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>联动轮播配置，可定义值</td>
                             </tr>
                             <tr>
-                                <td>pagination.bullets</td>
-                                <td>object</td>
-                                <td>null</td>
-                                <td>圆点分页器配置，包含el和clickable属性</td>
+                                <td><code>clickToSlide</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
+                                <td>是否启用点击切换功能</td>
                             </tr>
                             <tr>
-                                <td>pagination.numbers</td>
-                                <td>object</td>
-                                <td>null</td>
-                                <td>数字分页器配置，包含el、clickable和names属性</td>
+                                <td><code>breakpoints</code></td>
+                                <td><code>object</code></td>
+                                <td>-</td>
+                                <td>响应式断点配置，根据屏幕宽度设置不同参数</td>
                             </tr>
                             <tr>
-                                <td>pagination.fraction</td>
-                                <td>object</td>
-                                <td>null</td>
-                                <td>分式分页器配置，包含el和style属性</td>
+                                <td><code>pagination.type</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>分页器类型，可选值：<code>'bullets'</code>（圆点）、<code>'numbers'</code>（数字）、<code>'fraction'</code>（分数式）、<code>'progressbar'</code>（进度条）、<code>'scrollbar'</code>（滑块）
+                                </td>
                             </tr>
                             <tr>
-                                <td>pagination.progressbar</td>
-                                <td>object</td>
-                                <td>null</td>
-                                <td>进度条分页器配置，包含el属性</td>
+                                <td><code>pagination.clickable</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否可点击切换</td>
                             </tr>
                             <tr>
-                                <td>navigation</td>
-                                <td>object</td>
-                                <td>null</td>
-                                <td>包含prevEl和nextEl属性，分别设置上一个、下一个按钮的选择器</td>
+                                <td><code>pagination.hoverChange</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否可划入切换</td>
                             </tr>
                             <tr>
-                                <td>mousewheel</td>
-                                <td>boolean</td>
-                                <td>false</td>
+                                <td><code>pagination.names</code></td>
+                                <td><code>array</code></td>
+                                <td>-</td>
+                                <td>numbers 类型可配置，自定义分页器文字，可传入任何有效的 HTML 字符串</td>
+                            </tr>
+                            <tr>
+                                <td><code>pagination.style</code></td>
+                                <td><code>string</code></td>
+                                <td>-</td>
+                                <td>fraction
+                                    类型样式，可选值：<code>'padded'</code>（带前导零）、<code>'chinese'</code>（中文数字）、<code>'roman'</code>（罗马数字）、<code>'progressbar'</code>分式分页器
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>navigation</code></td>
+                                <td><code>object</code></td>
+                                <td>-</td>
+                                <td>导航按钮配置，包含 <code>prevEl</code>（上一个按钮选择器）和 <code>nextEl</code>（下一个按钮选择器）</td>
+                            </tr>
+                            <tr>
+                                <td><code>mousewheel</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
                                 <td>是否启用鼠标滚轮控制</td>
                             </tr>
                             <tr>
-                                <td>keyboard</td>
-                                <td>boolean</td>
-                                <td>false</td>
+                                <td><code>keyboard</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
                                 <td>是否启用键盘控制</td>
                             </tr>
                             <tr>
-                                <td>touchable</td>
-                                <td>boolean</td>
-                                <td>true</td>
+                                <td><code>touchable</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
                                 <td>是否启用触摸滑动</td>
                             </tr>
                             <tr>
-                                <td>threshold</td>
-                                <td>number</td>
-                                <td>50</td>
-                                <td>触发切换的滑动距离阈值(px)</td>
+                                <td><code>magnifier</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否开启放大镜功能</td>
                             </tr>
                             <tr>
-                                <td>touchRatio</td>
-                                <td>number</td>
-                                <td>1</td>
-                                <td>触摸距离与slide移动距离的比率</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="code">
-                    <code>on: {}</code>
-                </div>
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>事件名</th>
-                                <th>参数</th>
-                                <th>说明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>beforeInit</td>
-                                <td>swiper</td>
-                                <td>Swiper初始化前触发</td>
+                                <td><code>fixedMagnifierSize</code></td>
+                                <td><code>number</code></td>
+                                <td>-</td>
+                                <td>固定位置放大镜的尺寸（像素）</td>
                             </tr>
                             <tr>
-                                <td>init</td>
-                                <td>swiper</td>
-                                <td>Swiper初始化完成后触发</td>
+                                <td><code>showSelectionBox</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
+                                <td>是否显示选区框</td>
                             </tr>
                             <tr>
-                                <td>slideChange</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;activeSlide: HTMLElement,<br>
-                                    &nbsp;&nbsp;activeClasses: string[]<br>
-                                    }
+                                <td><code>selectionBoxSize</code></td>
+                                <td><code>number</code></td>
+                                <td>-</td>
+                                <td>选区框的大小（像素），默认根据放大倍率自动计算</td>
+                            </tr>
+                            <tr>
+                                <td><code>magnifierMargin</code></td>
+                                <td><code>number</code></td>
+                                <td>-</td>
+                                <td>放大镜的间距（像素）</td>
+                            </tr>
+                            <tr>
+                                <td><code>zoomRatio</code></td>
+                                <td><code>number</code></td>
+                                <td>-</td>
+                                <td>放大倍率</td>
+                            </tr>
+                            <tr>
+                                <td><code>perspective</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1500</code></td>
+                                <td>3D 变换的视距（像素）</td>
+                            </tr>
+                            <tr>
+                                <td><code>transforms</code></td>
+                                <td><code>object</code></td>
+                                <td>-</td>
+                                <td>自定义轮播图样式配置，包含
+                                    <code>scale</code>（缩放）、<code>translate</code>（平移）、<code>rotate</code>（旋转）、<code>skew</code>（斜切）、<code>perspective</code>（透视）、<code>backfaceVisibility</code>（背面可见性）、<code>opacity</code>（透明度）、<code>filter</code>（滤镜）、<code>uniformSpacing</code>（统一可视间距）等配置
                                 </td>
-                                <td>幻灯片切换时触发</td>
-                            </tr>
-                            <tr>
-                                <td>beforeSlideChangeStart</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;targetIndex: number<br>
-                                    }
-                                </td>
-                                <td>幻灯片开始切换之前触发</td>
-                            </tr>
-                            <tr>
-                                <td>beforeTransitionStart</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;targetIndex: number<br>
-                                    }
-                                </td>
-                                <td>过渡动画开始之前触发</td>
-                            </tr>
-                            <tr>
-                                <td>transitionStart</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;targetIndex: number<br>
-                                    }
-                                </td>
-                                <td>过渡动画开始时触发</td>
-                            </tr>
-                            <tr>
-                                <td>transitionEnd</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;previousIndex: number<br>
-                                    }
-                                </td>
-                                <td>过渡动画结束时触发</td>
-                            </tr>
-                            <tr>
-                                <td>slideChangeTransitionStart</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;direction: 'next' | 'prev'<br>
-                                    }
-                                </td>
-                                <td>幻灯片切换过渡开始时触发</td>
-                            </tr>
-                            <tr>
-                                <td>slideChangeTransitionEnd</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;direction: 'next' | 'prev'<br>
-                                    }
-                                </td>
-                                <td>幻灯片切换过渡结束时触发</td>
-                            </tr>
-                            <tr>
-                                <td>slideActiveIndexChange</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;previousIndex: number<br>
-                                    }
-                                </td>
-                                <td>活动幻灯片索引改变时触发</td>
-                            </tr>
-                            <tr>
-                                <td>autoplayStart</td>
-                                <td>swiper</td>
-                                <td>自动播放开始时触发</td>
-                            </tr>
-                            <tr>
-                                <td>autoplayStop</td>
-                                <td>swiper</td>
-                                <td>自动播放停止时触发</td>
-                            </tr>
-                            <tr>
-                                <td>autoplayPause</td>
-                                <td>swiper</td>
-                                <td>自动播放暂停时触发(如鼠标悬停)</td>
-                            </tr>
-                            <tr>
-                                <td>autoplayResume</td>
-                                <td>swiper</td>
-                                <td>自动播放恢复时触发</td>
-                            </tr>
-                            <tr>
-                                <td>touchStart</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;activeIndex: number,<br>
-                                    &nbsp;&nbsp;event: Event<br>
-                                    }
-                                </td>
-                                <td>触摸开始时触发</td>
-                            </tr>
-                            <tr>
-                                <td>touchMove</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;moveX: number,<br>
-                                    &nbsp;&nbsp;moveY: number<br>
-                                    }
-                                </td>
-                                <td>触摸移动时触发</td>
-                            </tr>
-                            <tr>
-                                <td>touchEnd</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;moveDistance: number,<br>
-                                    &nbsp;&nbsp;duration: number<br>
-                                    }
-                                </td>
-                                <td>触摸结束时触发</td>
-                            </tr>
-                            <tr>
-                                <td>click</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;target: HTMLElement<br>
-                                    }
-                                </td>
-                                <td>点击幻灯片时触发</td>
-                            </tr>
-                            <tr>
-                                <td>doubleClick</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;target: HTMLElement<br>
-                                    }
-                                </td>
-                                <td>双击幻灯片时触发</td>
-                            </tr>
-                            <tr>
-                                <td>scroll</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;deltaY: number<br>
-                                    }
-                                </td>
-                                <td>鼠标滚轮滚动时触发</td>
-                            </tr>
-                            <tr>
-                                <td>resize</td>
-                                <td>swiper</td>
-                                <td>容器尺寸改变时触发</td>
-                            </tr>
-                            <tr>
-                                <td>breakpoint</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;breakpoint: number<br>
-                                    }
-                                </td>
-                                <td>断点切换时触发</td>
-                            </tr>
-                            <tr>
-                                <td>a11y</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;key: string<br>
-                                    }
-                                </td>
-                                <td>键盘操作或屏幕阅读器操作时触发</td>
-                            </tr>
-                            <tr>
-                                <td>imagesReady</td>
-                                <td>swiper</td>
-                                <td>所有图片加载完成时触发</td>
-                            </tr>
-                            <tr>
-                                <td>lazyImageLoad</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;src: string<br>
-                                    }
-                                </td>
-                                <td>懒加载图片开始加载时触发</td>
-                            </tr>
-                            <tr>
-                                <td>lazyImageReady</td>
-                                <td>
-                                    {<br>
-                                    &nbsp;&nbsp;src: string<br>
-                                    }
-                                </td>
-                                <td>懒加载图片加载完成时触发</td>
-                            </tr>
-                            <tr>
-                                <td>beforeUpdate</td>
-                                <td>swiper</td>
-                                <td>Swiper更新前触发</td>
-                            </tr>
-                            <tr>
-                                <td>update</td>
-                                <td>swiper</td>
-                                <td>Swiper更新后触发</td>
-                            </tr>
-                            <tr>
-                                <td>beforeDestroy</td>
-                                <td>swiper</td>
-                                <td>Swiper销毁前触发</td>
-                            </tr>
-                            <tr>
-                                <td>destroy</td>
-                                <td>swiper</td>
-                                <td>Swiper销毁后触发</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="MainRightList">
-                <h2>Animation</h2>
+                <h2>动画效果Animation</h2>
                 <ul class="grid3">
                     <li>
                         <button id="fadeInBtn">Show (Fade In)</button>
@@ -1376,7 +1246,524 @@
                 <div id="myDiv">
                     <h2>Test Data</h2>
                 </div>
+                <div class="code">
+                    <code>ZhenshangyinAnimate.getInstance('selector').method();</code>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>方法</th>
+                                <th>参数</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>fadeIn()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>淡入显示元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>fadeOut()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>淡出隐藏元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideDown()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>向下滑出显示元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideUp()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>向上滑入隐藏元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideToggle()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>滑动切换显示/隐藏元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>fadeToggle()</code></td>
+                                <td><code>duration</code>, <code>callback</code></td>
+                                <td>淡入淡出切换显示/隐藏元素</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <div class="MainRightList">
+                <h2>页面滚动 Scroll Animate</h2>
+                <div class="animation-container" data-Zhenshangyin="zoomIn" data-group=".animation-icon" data-random
+                    data-next-trigger="0.1">
+                    <div class="animation-icon">🦄</div>
+                    <div class="animation-icon">🧊</div>
+                    <div class="animation-icon">🍉</div>
+                    <div class="animation-icon">🦋</div>
+                    <div class="animation-icon">🌵</div>
+                    <div class="animation-icon">🍩</div>
+                    <div class="animation-icon">🧸</div>
+                    <div class="animation-icon">🎆</div>
+                    <div class="animation-icon">🪁</div>
+                    <div class="animation-icon">🫧</div>
+                    <div class="animation-icon">🍀</div>
+                    <div class="animation-icon">👑</div>
+                    <div class="animation-icon">🛼</div>
+                    <div class="animation-icon">🌌</div>
+                    <div class="animation-icon">🕊️</div>
+                    <div class="animation-icon">🪐</div>
+                    <div class="animation-icon">🦜</div>
+                    <div class="animation-icon">🧁</div>
+                    <div class="animation-icon">🪷</div>
+                    <div class="animation-icon">🌠</div>
+                    <div class="animation-icon">🍦</div>
+                    <div class="animation-icon">🛹</div>
+                    <div class="animation-icon">🧇</div>
+                    <div class="animation-icon">🧃</div>
+                    <div class="animation-icon">🏖️</div>
+                    <div class="animation-icon">🎻</div>
+                    <div class="animation-icon">🚀</div>
+                    <div class="animation-icon">🫶</div>
+                    <div class="animation-icon">🍁</div>
+                    <div class="animation-icon">🌼</div>
+                    <div class="animation-icon">🪞</div>
+                    <div class="animation-icon">🦚</div>
+                    <div class="animation-icon">🧙‍♂️</div>
+                    <div class="animation-icon">🍕</div>
+                    <div class="animation-icon">🐬</div>
+                    <div class="animation-icon">🥨</div>
+                    <div class="animation-icon">🦩</div>
+                    <div class="animation-icon">🪄</div>
+                    <div class="animation-icon">🧚</div>
+                    <div class="animation-icon">🏝️</div>
+                    <div class="animation-icon">🍭</div>
+                    <div class="animation-icon">🧿</div>
+                    <div class="animation-icon">🕹️</div>
+                    <div class="animation-icon">🫰</div>
+                    <div class="animation-icon">🛸</div>
+                    <div class="animation-icon">🥑</div>
+                    <div class="animation-icon">🧢</div>
+                    <div class="animation-icon">🌺</div>
+                    <div class="animation-icon">🦕</div>
+                    <div class="animation-icon">⛰️</div>
+                    <div class="animation-icon">🎽</div>
+                    <div class="animation-icon">🧸</div>
+                    <div class="animation-icon">🚁</div>
+                    <div class="animation-icon">🧞‍♂️</div>
+                    <div class="animation-icon">🪅</div>
+                    <div class="animation-icon">🌋</div>
+                    <div class="animation-icon">🐉</div>
+                    <div class="animation-icon">🧬</div>
+                    <div class="animation-icon">🪢</div>
+                    <div class="animation-icon">🍓</div>
+                </div>
+                <div class="code">
+                    <code>new ZhenshangyinScrollAnimate(options);</code>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>类型</th>
+                                <th>默认值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>threshold</code></td>
+                                <td><code>number</code></td>
+                                <td><code>100</code></td>
+                                <td>元素进入视图的阈值（像素）</td>
+                            </tr>
+                            <tr>
+                                <td><code>duration</code></td>
+                                <td><code>number</code></td>
+                                <td><code>800</code></td>
+                                <td>动画持续时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>delay</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0</code></td>
+                                <td>动画延迟时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>repeat</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>元素滚出视图后是否重新播放动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>easing</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'cubic-bezier(0.25, 0.1, 0.25, 1)'</code></td>
+                                <td>动画缓动函数</td>
+                            </tr>
+                            <tr>
+                                <td><code>mobile</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否在移动设备上启用动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>distance</code></td>
+                                <td><code>number</code></td>
+                                <td><code>100</code></td>
+                                <td>滑动动画的距离（像素）</td>
+                            </tr>
+                            <tr>
+                                <td><code>startOpacity</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0</code></td>
+                                <td>动画开始时的透明度</td>
+                            </tr>
+                            <tr>
+                                <td><code>endOpacity</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1</code></td>
+                                <td>动画结束时的透明度</td>
+                            </tr>
+                            <tr>
+                                <td><code>startScale</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0.5</code></td>
+                                <td>缩放动画的起始比例</td>
+                            </tr>
+                            <tr>
+                                <td><code>endScale</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1</code></td>
+                                <td>缩放动画的结束比例</td>
+                            </tr>
+                            <tr>
+                                <td><code>startScaleOut</code></td>
+                                <td><code>number</code></td>
+                                <td><code>1.5</code></td>
+                                <td>缩小动画的起始比例</td>
+                            </tr>
+                            <tr>
+                                <td><code>use3D</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
+                                <td>是否使用 3D 变换</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table" style="margin-top: 20px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data 属性</th>
+                                <th>值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"fadeIn"</code></td>
+                                <td>淡入动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"slideUp"</code></td>
+                                <td>向上滑入动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"slideDown"</code></td>
+                                <td>向下滑入动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"slideLeft"</code></td>
+                                <td>向左滑入动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"slideRight"</code></td>
+                                <td>向右滑入动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"zoomIn"</code></td>
+                                <td>放大显示动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"zoomOut"</code></td>
+                                <td>缩小显示动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"flipInX"</code></td>
+                                <td>X 轴翻转动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-zhenshangyin</code></td>
+                                <td><code>"flipInY"</code></td>
+                                <td>Y 轴翻转动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-duration</code></td>
+                                <td><code>number</code></td>
+                                <td>动画持续时间（毫秒），支持组合动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-delay</code></td>
+                                <td><code>number</code></td>
+                                <td>动画延迟时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-group</code></td>
+                                <td><code>string</code></td>
+                                <td>组动画选择器，指定组内元素</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-random</code></td>
+                                <td>-</td>
+                                <td>添加此属性启用随机顺序播放</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-next-trigger</code></td>
+                                <td><code>number</code></td>
+                                <td>触发下一个动画的时机，范围 0-1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="MainRightList">
+                <h2>盒子效果 Box Reveal</h2>
+                <div class="box-reveal-container">
+                    <div class="box-reveal-item" data-Zhenshangyin="boxReveal" data-box-direction="left">
+                        <div class="box-content">
+                            <h3>从左显示</h3>
+                            <p>这是从左显示的盒子效果</p>
+                        </div>
+                    </div>
+                    <div class="box-reveal-item" data-Zhenshangyin="boxReveal" data-box-direction="right">
+                        <div class="box-content">
+                            <h3>从右显示</h3>
+                            <p>这是从右显示的盒子效果</p>
+                        </div>
+                    </div>
+                    <div class="box-reveal-item" data-Zhenshangyin="boxReveal" data-box-direction="top">
+                        <div class="box-content">
+                            <h3>从上显示</h3>
+                            <p>这是从上显示的盒子效果</p>
+                        </div>
+                    </div>
+                    <div class="box-reveal-item" data-Zhenshangyin="boxReveal" data-box-direction="bottom">
+                        <div class="box-content">
+                            <h3>从下显示</h3>
+                            <p>这是从下显示的盒子效果</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="code">
+                    <code>new ZhenshangyinBoxReveal(options);</code>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>类型</th>
+                                <th>默认值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>threshold</code></td>
+                                <td><code>number</code></td>
+                                <td><code>100</code></td>
+                                <td>元素进入视图的阈值（像素），当元素距离视口这个距离时触发动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>duration</code></td>
+                                <td><code>number</code></td>
+                                <td><code>800</code></td>
+                                <td>动画持续时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>delay</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0</code></td>
+                                <td>动画延迟开始的时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>repeat</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否重复动画（当元素离开视口后再次进入时是否再次触发）</td>
+                            </tr>
+                            <tr>
+                                <td><code>mobile</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>true</code></td>
+                                <td>在移动端也启用</td>
+                            </tr>
+                            <tr>
+                                <td><code>easing</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'cubic-bezier(0.25, 0.1, 0.25, 1)'</code></td>
+                                <td>动画缓动函数</td>
+                            </tr>
+                            <tr>
+                                <td><code>boxBackground</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'#000000'</code></td>
+                                <td>遮罩层的背景样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>boxDirection</code></td>
+                                <td><code>string</code></td>
+                                <td><code>'left'</code></td>
+                                <td>默认的动画方向，可选值：<code>'left'</code>、<code>'right'</code>、<code>'top'</code>、<code>'bottom'</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table" style="margin-top: 20px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data 属性</th>
+                                <th>值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>data-Zhenshangyin</code></td>
+                                <td><code>"boxReveal"</code></td>
+                                <td>启用盒子显示效果</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-box-direction</code></td>
+                                <td><code>"left"</code> / <code>"right"</code> / <code>"top"</code> /
+                                    <code>"bottom"</code></td>
+                                <td>指定显示方向</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-delay</code></td>
+                                <td><code>number</code></td>
+                                <td>指定延迟时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-duration</code></td>
+                                <td><code>number</code></td>
+                                <td>指定动画持续时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-group</code></td>
+                                <td><code>string</code></td>
+                                <td>指定组内元素的选择器</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-next-trigger</code></td>
+                                <td><code>number</code></td>
+                                <td>组内元素间的动画延迟（秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-random-direction</code></td>
+                                <td>-</td>
+                                <td>启用随机方向效果</td>
+                            </tr>
+                            <tr>
+                                <td><code>data-random</code></td>
+                                <td>-</td>
+                                <td>启用随机顺序效果</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="MainRightList">
+                <h2>文字效果TextEffect</h2>
+                <ul>
+                    <li>
+                        <h4 id="demo1" class="text-effect-demo">欢迎使用文字拆分动画插件</h4>
+                    </li>
+                    <li>
+                        <h4 id="demo2" class="text-effect-demo">自定义效果示例：缩放、旋转、位移、透明与颜色过渡</h4>
+                    </li>
+                    <li>
+                        <h4 id="demo3" class="text-effect-demo">文字动画效果展示</h4>
+                    </li>
+                </ul>
+                <div class="code">
+                    <code>new ZhenshangyinTextEffect('#demo', options);</code>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>类型</th>
+                                <th>默认值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>threshold</code></td>
+                                <td><code>number</code></td>
+                                <td><code>50</code></td>
+                                <td>触发动画的滚动距离（像素）</td>
+                            </tr>
+                            <tr>
+                                <td><code>repeat</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否允许反复触发动画</td>
+                            </tr>
+                            <tr>
+                                <td><code>mobile</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否在移动端启用</td>
+                            </tr>
+                            <tr>
+                                <td><code>overlap</code></td>
+                                <td><code>number</code></td>
+                                <td><code>0.1</code></td>
+                                <td>邻接字符动画重叠比例（0~1）</td>
+                            </tr>
+                            <tr>
+                                <td><code>duration</code></td>
+                                <td><code>number</code></td>
+                                <td><code>500</code></td>
+                                <td>单个字符动画持续时间（毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td><code>random</code></td>
+                                <td><code>boolean</code></td>
+                                <td><code>false</code></td>
+                                <td>是否随机顺序执行</td>
+                            </tr>
+                            <tr>
+                                <td><code>effects</code></td>
+                                <td><code>array</code></td>
+                                <td>-</td>
+                                <td>动画效果数组，支持
+                                    <code>color</code>、<code>fontSize</code>、<code>letterSpacing</code>、<code>scale</code>、<code>opacity</code>、<code>rotate</code>、<code>translateY</code>、<code>translateX</code>、<code>skewX</code>
+                                    等</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <div class="MainRightList">
                 <h2>Slider 滑块</h2>
                 <ul>
@@ -1508,12 +1895,14 @@
         </div>
     </div>
 
-    <input type="text" id="en" autocomplete="off" placeholder="简体中文">
+
+    <!-- <input type="text" id="en" autocomplete="off" placeholder="简体中文"> -->
 
     <script src="en.js"></script>
     <script src="map.js"></script>
     <script src="No-Pillow.js"></script>
     <script src="index.js"></script>
+
 </body>
 
 </html>
